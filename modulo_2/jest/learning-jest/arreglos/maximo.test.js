@@ -1,6 +1,6 @@
 const{maximo} = require ('./maximo');
 
-describe('Maximo', ()=>{
+describe('Maximo ', ()=>{
     test('Happy path:[4,9,2,10] mayor 10',() =>{
         expect(maximo([4,9,2,10])).toBe(10);
     });
@@ -10,5 +10,5 @@ describe('Maximo', ()=>{
     test('Sad path:arreglo invalido',() =>{
         expect(()=>maximo([])).toThrow('arreglo invalido');
         expect(()=>maximo('edificio')).toThrow('arreglo invalido');
-    });
+    });
 })

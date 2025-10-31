@@ -1,9 +1,9 @@
-function maximo (arreglo){
-    if(!Array.isArray(arreglo) || arreglo.length==0)
-        throw new TypeError ("arreglo invalido");
-    mayor = 0;
-    for(let i=0; i<arreglo.length; i++){
-        if (arreglo[i]>mayor || mayor==0){
+function maximo(arreglo){
+    if(!Array.isArray(arreglo)|| arreglo.length==0)
+        throw new TypeError("arreglo invalido")
+    mayor=0;
+    for (let i=0; i<arreglo.length; i++){
+        if(arreglo[i]>mayor){
             mayor=arreglo[i];
         }
     }
