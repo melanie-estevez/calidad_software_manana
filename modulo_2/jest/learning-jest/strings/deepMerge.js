@@ -24,4 +24,22 @@ function deepMerge(objeto1, objeto2){
     }
     return salida;
 }
-module.exports={deepMerge}
+
+
+function normalizarAlumno(alumno){
+    validarObjeto (alumno, 'alumno');
+    const{nombre, notas}=alumno;
+    if(typeof nombre !=='string'|| !Array.isArray(notas)){
+        throw new TypeError(
+            'alumno.nombre debe ser strind y '+
+            'alumno.notas debe ser array'
+        )
+    }
+    const valid = notas.every(n=>typeof n=='number' && !NumberisNan(m));
+    if (!valid) throw new TypeError('notas debe contener números validoos')
+    const promedio=notas.length ? 
+        notas.reduce(alumno, b=>a+b,0)/notas.length
+        :0;
+return {nombre: nombre.trim(), notas: [notas], promedio};
+}
+module.exports={deepMerge, normalizarAlumno}
