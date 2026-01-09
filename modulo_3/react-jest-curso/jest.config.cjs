@@ -2,6 +2,7 @@ module.exports = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
 
+
   // Para que Jest entienda TS/TSX
   transform: {
     "^.+\\.(t|j)sx?$": "babel-jest"
