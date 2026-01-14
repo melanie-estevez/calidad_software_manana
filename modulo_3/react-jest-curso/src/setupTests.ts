@@ -1,4 +1,8 @@
 import "@testing-library/jest-dom";
 
-// Mock básico de fetch (se redefine por test)
-global.fetch = jest.fn();
+import '@testing-library/jest-dom';
+
+Object.defineProperty(globalThis, 'fetch', {
+  writable: true,
+  value: jest.fn(),
+});
